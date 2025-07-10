@@ -1,0 +1,22 @@
+async function generateVideo() {
+  const prompt = document.getElementById("prompt").value;
+  document.getElementById("videoOutput").innerText = "Generating video...";
+
+  // Fake demo – actual video generation needs API access
+  const response = await fetch("https://api.runwayml.com/generate-video", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_KEY"
+    },
+    body: JSON.stringify({
+      prompt: prompt,
+      length: 30  // 30 seconds
+    })
+  });
+
+  const data = await response.json();
+  document.getElementById("videoOutput").innerHTML = `
+    <video controls src="${data.video_url}" width="640"></video>
+  `;
+}
