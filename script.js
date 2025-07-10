@@ -16,7 +16,7 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_API_KEY' // if required
+        'Authorization': '8ea03da4-22f6-4820-aba1-190b5c639fe9:d50086421542bd27fcc23a150690db42' // if required
       },
       body: JSON.stringify({
         prompt: prompt,
