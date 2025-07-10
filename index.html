@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VEO 3 Malayalam</title>
+  <title>AI Video Generator - Veo 3 Style</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>VEO 3 മലയാളം പതിപ്പ്</h1>
-  <textarea id="prompt" placeholder="പ്രേംപ്റ്റ് നൽകുക..."></textarea>
-  <button onclick="generateVideo()">വീഡിയോ സൃഷ്ടിക്കുക</button>
-  <div id="videoOutput"></div>
+  <div class="container">
+    <h1>🎬 AI Video Generator</h1>
+    <p>Type your idea and get an AI-generated video!</p>
+
+    <textarea id="promptInput" placeholder="Describe your video... e.g., A cat walking through the snow at night."></textarea>
+
+    <select id="styleSelect">
+      <option value="cinematic">Cinematic</option>
+      <option value="3d">3D Animation</option>
+      <option value="cartoon">Cartoon Style</option>
+      <option value="realistic">Photorealistic</option>
+      <option value="fantasy">Fantasy</option>
+    </select>
+
+    <button id="generateBtn">Generate Video</button>
+
+    <div id="loading" class="hidden">⏳ Generating video...</div>
+    <div id="videoResult" class="hidden">
+      <h3>Your AI Video:</h3>
+      <video controls autoplay loop id="videoPlayer" width="480">
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
